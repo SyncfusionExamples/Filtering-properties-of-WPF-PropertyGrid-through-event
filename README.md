@@ -1,2 +1,19 @@
-# Filtering-properties-of-WPF-PropertyGrid-through-event
-Filtering properties of WPF PropertyGrid through event handling is a powerful technique that allows developers to dynamically control which properties are displayed in the PropertyGrid at runtime. This is particularly useful in scenarios where the visibility of certain properties depends on user interactions, application state, or specific business logic. By leveraging events such as PropertyFilterChanged or custom logic tied to UI triggers, developers can intercept the property rendering process and apply filters based on type, category, name, or custom attributes. For example, you might want to hide advanced settings from novice users or show additional configuration options only when a checkbox is selected. This dynamic filtering enhances user experience by keeping the interface clean and relevant. Implementing this typically involves subscribing to the appropriate event, evaluating the property metadata, and modifying the property list accordingly. WPF’s extensibility makes it possible to integrate such behavior seamlessly into MVVM architectures, ensuring maintainability and scalability.
+# Filtering Properties of WPF PropertyGrid Through Events
+## Overview
+Filtering properties in a WPF PropertyGrid through event handling is a powerful technique that allows developers to dynamically control which properties are displayed at runtime. This is especially useful in scenarios where property visibility depends on:
+- User interactions
+- Application state
+- Specific business logic
+
+## Why Use Property Filtering?
+Dynamic filtering enhances the user experience by keeping the interface clean and relevant. For example:
+- Hide advanced settings from novice users
+- Show additional configuration options only when a checkbox is selected
+- Display properties based on user roles or permissions
+
+## How It Works
+By leveraging events such as PropertyFilterChanged, or by implementing custom logic tied to UI triggers, developers can intercept the property rendering process and apply filters based on:
+- Property type
+- Category
+- Name
+- Custom attributes
