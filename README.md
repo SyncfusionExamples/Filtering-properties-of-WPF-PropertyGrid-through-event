@@ -1,19 +1,21 @@
 # Filtering Properties of WPF PropertyGrid Through Events
+
 ## Overview
-Filtering properties in a WPF PropertyGrid through event handling is a powerful technique that allows developers to dynamically control which properties are displayed at runtime. This is especially useful in scenarios where property visibility depends on:
-- User interactions
-- Application state
-- Specific business logic
+Filtering properties in a WPF PropertyGrid through event handling is a powerful technique that allows developers to dynamically control which properties are displayed at runtime. This approach is especially useful when property visibility must change based on user interactions, application state, or specific business rules. Instead of statically exposing all properties, filtering enables a cleaner and more context‑aware UI.
 
 ## Why Use Property Filtering?
-Dynamic filtering enhances the user experience by keeping the interface clean and relevant. For example:
-- Hide advanced settings from novice users
-- Show additional configuration options only when a checkbox is selected
-- Display properties based on user roles or permissions
+Dynamic filtering improves usability by ensuring users only see relevant properties. Common scenarios include:
+
+* Hiding advanced or internal settings from novice users
+* Displaying additional options only when certain features are enabled
+* Showing or hiding properties based on user roles or permissions
 
 ## How It Works
-By leveraging events such as PropertyFilterChanged, or by implementing custom logic tied to UI triggers, developers can intercept the property rendering process and apply filters based on:
-- Property type
-- Category
-- Name
-- Custom attributes
+Property filtering is typically implemented by handling PropertyGrid‑related events such as PropertyFilterChanged or by applying custom logic triggered by UI actions. During the property rendering process, developers can intercept and evaluate each property based on criteria such as:
+
+* Property type
+* Property category
+* Property name
+* Custom attributes or metadata
+
+By filtering properties at runtime, the PropertyGrid becomes more intuitive, adaptive, and aligned with real‑world usage scenarios.
