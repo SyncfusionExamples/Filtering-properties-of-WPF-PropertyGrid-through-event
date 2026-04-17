@@ -1,21 +1,31 @@
-# Filtering Properties of WPF PropertyGrid Through Events
+# Filtering and Customizing Properties in WPF PropertyGrid Through Event
+
+This sample demonstrates how to filter, customize, group, and reorder properties dynamically in the Syncfusion WPF PropertyGrid using the AutoGeneratingPropertyGridItem event.
+
+By handling this event, you can control which properties are displayed, how they appear, and how they are grouped, entirely at runtime—without relying on attributes in the data model.
 
 ## Overview
-Filtering properties in a WPF PropertyGrid through event handling is a powerful technique that allows developers to dynamically control which properties are displayed at runtime. This approach is especially useful when property visibility must change based on user interactions, application state, or specific business rules. Instead of statically exposing all properties, filtering enables a cleaner and more context‑aware UI.
+The Syncfusion WPF PropertyGrid automatically generates property items from the selected object. The _AutoGeneratingPropertyGridItem_ event allows you to intercept this process and:
+- Cancel unwanted properties
+- Modify display names and descriptions
+- Assign categories
+- Control the order of properties
 
-## Why Use Property Filtering?
-Dynamic filtering improves usability by ensuring users only see relevant properties. Common scenarios include:
+This approach is ideal when property presentation needs to be **dynamic, conditional, or UI‑specific**.
 
-* Hiding advanced or internal settings from novice users
-* Displaying additional options only when certain features are enabled
-* Showing or hiding properties based on user roles or permissions
+## What This Sample Demonstrates
+- Filtering properties dynamically using e.Cancel
+- Customizing property DisplayName, Description, Category, and Order
+- Grouping properties into logical categories
+- Disabling default sorting to honor custom ordering
+- Binding a business object (Person) to the PropertyGrid
 
-## How It Works
-Property filtering is typically implemented by handling PropertyGrid‑related events such as PropertyFilterChanged or by applying custom logic triggered by UI actions. During the property rendering process, developers can intercept and evaluate each property based on criteria such as:
+## Key Concepts Used - AutoGeneratingPropertyGridItem Event
+This event is triggered for each property before it is added to the PropertyGrid. This allows full runtime control over the property item.
 
-* Property type
-* Property category
-* Property name
-* Custom attributes or metadata
-
-By filtering properties at runtime, the PropertyGrid becomes more intuitive, adaptive, and aligned with real‑world usage scenarios.
+## Use Cases
+This pattern is useful when:
+- Property visibility depends on UI logic
+- You don’t want to modify model classes with attributes
+- Properties must be reordered or grouped dynamically
+- Enterprise forms require controlled property presentation
